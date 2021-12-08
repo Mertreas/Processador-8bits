@@ -1,0 +1,425 @@
+Analysis & Elaboration report for Processador
+Sun Dec 05 14:34:36 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                   ;
++------------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status      ; Successful - Sun Dec 05 14:34:36 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; Processador                                 ;
+; Top-level Entity Name              ; Processador                                 ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                            ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DCF484I7G     ;                    ;
+; Top-level entity name                                            ; Processador        ; Processador        ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sun Dec 05 14:34:13 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
+    Info (12022): Found design unit 1: Processador-CPU File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 16
+    Info (12023): Found entity 1: Processador File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 7
+Info (12127): Elaborating entity "Processador" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at Processador.vhd(11): used implicit default value for signal "dataout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 11
+Warning (10540): VHDL Signal Declaration warning at Processador.vhd(39): used explicit default value for signal "numero" because signal was never assigned a value File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at Processador.vhd(73): signal "registrador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at Processador.vhd(75): signal "endereco" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at Processador.vhd(79): signal "memoria" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at Processador.vhd(79): signal "endereco" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at Processador.vhd(80): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at Processador.vhd(81): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 81
+Warning (10492): VHDL Process Statement warning at Processador.vhd(83): signal "PC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at Processador.vhd(85): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 85
+Warning (10492): VHDL Process Statement warning at Processador.vhd(85): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 85
+Warning (10492): VHDL Process Statement warning at Processador.vhd(87): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at Processador.vhd(89): signal "auxint" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at Processador.vhd(105): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at Processador.vhd(105): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at Processador.vhd(107): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at Processador.vhd(109): signal "auxint" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 109
+Warning (10492): VHDL Process Statement warning at Processador.vhd(124): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at Processador.vhd(124): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at Processador.vhd(126): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at Processador.vhd(128): signal "auxint" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at Processador.vhd(143): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 143
+Warning (10492): VHDL Process Statement warning at Processador.vhd(143): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 143
+Warning (10492): VHDL Process Statement warning at Processador.vhd(145): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 145
+Warning (10492): VHDL Process Statement warning at Processador.vhd(147): signal "auxint" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at Processador.vhd(162): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 162
+Warning (10492): VHDL Process Statement warning at Processador.vhd(162): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 162
+Warning (10492): VHDL Process Statement warning at Processador.vhd(168): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 168
+Warning (10492): VHDL Process Statement warning at Processador.vhd(170): signal "auxint" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at Processador.vhd(185): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 185
+Warning (10492): VHDL Process Statement warning at Processador.vhd(185): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 185
+Warning (10492): VHDL Process Statement warning at Processador.vhd(191): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 191
+Warning (10492): VHDL Process Statement warning at Processador.vhd(193): signal "auxint" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 193
+Warning (10492): VHDL Process Statement warning at Processador.vhd(208): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 208
+Warning (10492): VHDL Process Statement warning at Processador.vhd(208): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 208
+Warning (10492): VHDL Process Statement warning at Processador.vhd(214): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 214
+Warning (10492): VHDL Process Statement warning at Processador.vhd(216): signal "auxint" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 216
+Warning (10492): VHDL Process Statement warning at Processador.vhd(231): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 231
+Warning (10492): VHDL Process Statement warning at Processador.vhd(231): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 231
+Warning (10492): VHDL Process Statement warning at Processador.vhd(237): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 237
+Warning (10492): VHDL Process Statement warning at Processador.vhd(239): signal "auxint" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 239
+Warning (10492): VHDL Process Statement warning at Processador.vhd(254): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 254
+Warning (10492): VHDL Process Statement warning at Processador.vhd(254): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 254
+Warning (10492): VHDL Process Statement warning at Processador.vhd(260): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 260
+Warning (10492): VHDL Process Statement warning at Processador.vhd(262): signal "auxint" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 262
+Warning (10492): VHDL Process Statement warning at Processador.vhd(277): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 277
+Warning (10492): VHDL Process Statement warning at Processador.vhd(277): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 277
+Warning (10492): VHDL Process Statement warning at Processador.vhd(283): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 283
+Warning (10492): VHDL Process Statement warning at Processador.vhd(285): signal "auxint" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 285
+Warning (10492): VHDL Process Statement warning at Processador.vhd(305): signal "memoria" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 305
+Warning (10492): VHDL Process Statement warning at Processador.vhd(305): signal "endereco" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 305
+Warning (10492): VHDL Process Statement warning at Processador.vhd(306): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 306
+Warning (10492): VHDL Process Statement warning at Processador.vhd(307): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 307
+Warning (10492): VHDL Process Statement warning at Processador.vhd(309): signal "auxintA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 309
+Warning (10492): VHDL Process Statement warning at Processador.vhd(323): signal "auxintB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 323
+Warning (10492): VHDL Process Statement warning at Processador.vhd(339): signal "numero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 339
+Warning (10492): VHDL Process Statement warning at Processador.vhd(339): signal "endereco" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 339
+Warning (10492): VHDL Process Statement warning at Processador.vhd(340): signal "endereco" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 340
+Warning (10492): VHDL Process Statement warning at Processador.vhd(345): signal "registrador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 345
+Warning (10492): VHDL Process Statement warning at Processador.vhd(346): signal "registrador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 346
+Warning (10492): VHDL Process Statement warning at Processador.vhd(347): signal "auxregister" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 347
+Warning (10631): VHDL Process Statement warning at Processador.vhd(70): inferring latch(es) for signal or variable "memoria", which holds its previous value in one or more paths through the process File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Warning (10631): VHDL Process Statement warning at Processador.vhd(70): inferring latch(es) for signal or variable "resultado", which holds its previous value in one or more paths through the process File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Warning (10631): VHDL Process Statement warning at Processador.vhd(70): inferring latch(es) for signal or variable "auxint", which holds its previous value in one or more paths through the process File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Warning (10631): VHDL Process Statement warning at Processador.vhd(70): inferring latch(es) for signal or variable "DISPLAY", which holds its previous value in one or more paths through the process File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Warning (10631): VHDL Process Statement warning at Processador.vhd(70): inferring latch(es) for signal or variable "auxintA", which holds its previous value in one or more paths through the process File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Warning (10631): VHDL Process Statement warning at Processador.vhd(70): inferring latch(es) for signal or variable "auxintB", which holds its previous value in one or more paths through the process File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Warning (10631): VHDL Process Statement warning at Processador.vhd(70): inferring latch(es) for signal or variable "auxregister", which holds its previous value in one or more paths through the process File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Warning (10631): VHDL Process Statement warning at Processador.vhd(70): inferring latch(es) for signal or variable "registrador", which holds its previous value in one or more paths through the process File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[0]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[1]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[2]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[3]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[4]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[5]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[6]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[7]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[8]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[9]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[10]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[11]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[12]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[13]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[14]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[15]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[16]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[17]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[18]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[19]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[20]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[21]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[22]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[23]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[24]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[25]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[26]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[27]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[28]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[29]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[30]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintB[31]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[0]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[1]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[2]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[3]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[4]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[5]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[6]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[7]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[8]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[9]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[10]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[11]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[12]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[13]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[14]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[15]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[16]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[17]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[18]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[19]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[20]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[21]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[22]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[23]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[24]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[25]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[26]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[27]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[28]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[29]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[30]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxintA[31]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[0]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[1]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[2]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[3]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[4]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[5]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[6]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[7]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[8]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[9]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[10]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[11]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[12]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[13]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[14]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[15]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[16]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[17]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[18]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[19]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[20]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[21]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[22]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[23]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[24]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[25]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[26]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[27]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[28]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[29]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[30]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[31]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[32]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[33]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "DISPLAY[34]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[0]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[1]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[2]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[3]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[4]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[5]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[6]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[7]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[8]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[9]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[10]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[11]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[12]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[13]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[14]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[15]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[16]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[17]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[18]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[19]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[20]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[21]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[22]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[23]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[24]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[25]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[26]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[27]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[28]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[29]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[30]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "auxint[31]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "resultado[0]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "resultado[1]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "resultado[2]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "resultado[3]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[4][0]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[4][1]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[4][2]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[4][3]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[4][4]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[4][5]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[4][6]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[4][7]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[3][0]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[3][1]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[3][2]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[3][3]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[3][4]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[3][5]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[3][6]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[3][7]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[2][0]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[2][1]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[2][2]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[2][3]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[2][4]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[2][5]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[2][6]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[2][7]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[1][0]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[1][1]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[1][2]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[1][3]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[1][4]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[1][5]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[1][6]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[1][7]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[0][0]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[0][1]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[0][2]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[0][3]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[0][4]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[0][5]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[0][6]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info (10041): Inferred latch for "memoria[0][7]" at Processador.vhd(70) File: C:/Users/The Greatest/Documents/Maquina/Processador/Processador/Processador.vhd Line: 70
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 70 warnings
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Sun Dec 05 14:34:36 2021
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:34
+
+
